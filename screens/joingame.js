@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Button, TextInput, Alert } from 'react-native';
 import PropTypes from 'prop-types';
 import socketIOClient from 'socket.io-client';
+import SOCKET_SERVER_URL from '../config/config';
 import styles from '../styles/styles';
 
 class JoinGame extends React.Component {
@@ -29,7 +30,7 @@ class JoinGame extends React.Component {
         <Button
           onPress={() => {
             const { navigation } = this.props;
-            this.socket = socketIOClient('http://192.168.2.17:8000/');
+            this.socket = socketIOClient(SOCKET_SERVER_URL);
             this.socket.on('connect', () => {
               this.socket.emit('getRoomInfo', roomId);
               this.socket.on('roomInfo', info => {

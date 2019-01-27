@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Button, Alert } from 'react-native';
 import socketIOClient from 'socket.io-client';
 import PropTypes from 'prop-types';
+import SOCKET_SERVER_URL from '../config/config';
 import styles from '../styles/styles';
 
 class Lobby extends React.Component {
@@ -35,7 +36,7 @@ class Lobby extends React.Component {
       this.setState({ roomId: connectRoomId });
     }
 
-    this.socket = socketIOClient('http://192.168.2.17:8000/');
+    this.socket = socketIOClient(SOCKET_SERVER_URL);
     this.socket.on('connect', () => {
       this.setState(prevState => {
         if (prevState.players.length === 0) return { players: [player] };
