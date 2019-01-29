@@ -36,7 +36,9 @@ class Lobby extends React.Component {
       this.setState({ roomId: connectRoomId });
     }
 
-    this.socket = socketIOClient(SOCKET_SERVER_URL);
+    this.socket = socketIOClient(SOCKET_SERVER_URL.SOCKET_SERVER_URL, {
+      transports: ['websocket']
+    });
     this.socket.on('connect', () => {
       this.setState(prevState => {
         if (prevState.players.length === 0) return { players: [player] };

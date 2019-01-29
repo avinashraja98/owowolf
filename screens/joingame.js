@@ -30,7 +30,9 @@ class JoinGame extends React.Component {
         <Button
           onPress={() => {
             const { navigation } = this.props;
-            this.socket = socketIOClient(SOCKET_SERVER_URL);
+            this.socket = socketIOClient(SOCKET_SERVER_URL.SOCKET_SERVER_URL, {
+              transports: ['websocket']
+            });
             this.socket.on('connect', () => {
               this.socket.emit('getRoomInfo', roomId);
               this.socket.on('roomInfo', info => {
