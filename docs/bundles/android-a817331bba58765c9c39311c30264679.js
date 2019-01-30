@@ -2302,7 +2302,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     global.__expo = module.exports;
     global.Expo = module.exports;
   }
-},2,[3,4,339,355,329,5,364,376,378,379,381,384,387,389,392,361,394,396,399,407,410,413,415,418,422,425,434,382,436,449,462,463,465,474,475,476,550,551,553,555,556,558,764,766,768,770,471,772,774,776,793,795,797,799,801,871,873,472,874,875,877,882,1103,885,887,896,898,899,340,902]);
+},2,[3,4,339,355,329,5,364,376,378,379,381,384,387,389,392,361,394,396,399,407,410,413,415,418,422,425,434,382,436,449,462,463,465,474,475,476,550,551,553,555,556,558,764,766,768,770,471,772,774,776,793,795,797,799,801,871,873,472,874,875,877,882,1104,885,887,896,898,899,340,902]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _extends() {
     module.exports = _extends = Object.assign || function (target) {
@@ -2741,7 +2741,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   };
   module.exports = ReactNative;
-},5,[6,1070,47,156,166,1076,1077,1078,210,1075,251,253,254,255,259,212,1079,261,1080,266,1081,1073,1083,1084,216,241,1085,273,1086,275,232,277,278,282,1087,167,286,1089,1090,172,294,1074,180,244,80,1091,233,1092,300,127,128,181,301,311,312,313,1093,314,315,1094,57,56,207,83,263,317,189,219,220,297,112,318,280,134,55,319,1095,321,1096,54,24,1097,176,71,324,1098,326,33,138,8,1071,74,146,327,60,169,328,256]);
+},5,[6,1071,47,156,166,1077,1078,1079,210,1076,251,253,254,255,259,212,1080,261,1081,266,1082,1074,1084,1085,216,241,1086,273,1087,275,232,277,278,282,1088,167,286,1090,1091,172,294,1075,180,244,80,1092,233,1093,300,127,128,181,301,311,312,313,1094,314,315,1095,57,56,207,83,263,317,189,219,220,297,112,318,280,134,55,319,1096,321,1097,54,24,1098,176,71,324,1099,326,33,138,8,1072,74,146,327,60,169,328,256]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -2816,7 +2816,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   };
   module.exports = AccessibilityInfo;
-},1070,[8,33,71]);
+},1071,[8,33,71]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -4077,7 +4077,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }
 
   module.exports = UIManager;
-},71,[8,1071,27,6]);
+},71,[8,1072,27,6]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -4106,7 +4106,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   };
   module.exports = Platform;
-},1071,[8]);
+},1072,[8]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -4187,7 +4187,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = ActivityIndicatorWithRef;
-},47,[48,9,1071,51,54,80,146,1073]);
+},47,[48,9,1072,51,54,80,146,1074]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var defineProperty = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -4919,7 +4919,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }
 
   module.exports = Dimensions;
-},56,[3,21,22,42,1071,33,6,57]);
+},56,[3,21,22,42,1072,33,6,57]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -5723,7 +5723,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }
 
   module.exports = processColor;
-},74,[1071,61]);
+},74,[1072,61]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -5830,7 +5830,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }
 
   module.exports = processTransform;
-},75,[76,1071,6,26]);
+},75,[76,1072,6,26]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -12719,7 +12719,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   BatchedBridge.setImmediatesCallback(ExportedJSTimers.callImmediates.bind(ExportedJSTimers));
   module.exports = ExportedJSTimers;
-},100,[1071,24,6,8,15,101,104]);
+},100,[1072,24,6,8,15,101,104]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -13287,7 +13287,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   XMLHttpRequest.DONE = DONE;
   XMLHttpRequest._interceptor = null;
   module.exports = XMLHttpRequest;
-},105,[17,38,22,21,34,37,40,106,1072,115,6,104,117]);
+},105,[17,38,22,21,34,37,40,106,1073,115,6,104,117]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   "use strict";
 
@@ -13735,7 +13735,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     RCTNetworking = new RCTNetworking();
   }
   module.exports = RCTNetworking;
-},1072,[48,21,22,34,37,40,111,112,8,113]);
+},1073,[48,21,22,34,37,40,111,112,8,113]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -13868,7 +13868,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }(EventEmitter);
 
   module.exports = NativeEventEmitter;
-},112,[21,22,34,37,38,40,42,1071,33,6]);
+},112,[21,22,34,37,38,40,42,1072,33,6]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -15110,7 +15110,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   WebSocket.CLOSED = CLOSED;
   WebSocket.isAvailable = !!WebSocketModule;
   module.exports = WebSocket;
-},122,[9,21,22,34,37,40,116,106,112,117,8,1071,123,115,114,6]);
+},122,[9,21,22,34,37,40,116,106,112,117,8,1072,123,115,114,6]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -15504,7 +15504,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }();
 
   module.exports = Alert;
-},127,[48,21,22,128,8,1071]);
+},127,[48,21,22,128,8,1072]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -15726,7 +15726,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   };
   module.exports = Geolocation;
-},129,[130,112,8,6,133,104,1071,134]);
+},129,[130,112,8,6,133,104,1072,134]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = _$$_REQUIRE(_dependencyMap[0]);
 },130,[131]);
@@ -16922,7 +16922,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     unregisterInput: unregisterInput,
     isTextInput: isTextInput
   };
-},145,[1071,71]);
+},145,[1072,71]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -17394,7 +17394,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }();
 
   module.exports = AssetSourceResolver;
-},154,[21,22,55,1071,155,6]);
+},154,[21,22,55,1072,155,6]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -17485,7 +17485,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     animating: true
   };
   module.exports = ProgressBarAndroidToExport;
-},1073,[3,51,146]);
+},1074,[3,51,146]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -19173,7 +19173,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = Button;
-},166,[21,22,34,37,40,60,1071,51,65,54,167,1074,180,80,6]);
+},166,[21,22,34,37,40,60,1072,51,65,54,167,1075,180,80,6]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -20041,7 +20041,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   };
   module.exports = Touchable;
-},172,[48,173,1071,175,51,83,176,177,71,80,63,61]);
+},172,[48,173,1072,175,51,83,176,177,71,80,63,61]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -20214,7 +20214,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
 
   module.exports = TVEventHandler;
-},176,[1071,8,112]);
+},176,[1072,8,112]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   "use strict";
 
@@ -20408,7 +20408,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = TouchableNativeFeedback;
-},1074,[49,48,1071,51,65,83,172,244,71,80,225,245,74]);
+},1075,[49,48,1072,51,65,83,172,244,71,80,225,245,74]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -21155,7 +21155,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     FlatList: AnimatedImplementation.createAnimatedComponent(FlatList),
     SectionList: AnimatedImplementation.createAnimatedComponent(SectionList)
   });
-},181,[48,182,210,1075,216,241,167,80]);
+},181,[48,182,210,1076,216,241,167,80]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -26355,7 +26355,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = ListView;
-},212,[3,9,213,214,1071,51,83,8,216,217,229,230,80,231,225,215,163,104,6]);
+},212,[3,9,213,214,1072,51,83,8,216,217,229,230,80,231,225,215,163,104,6]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _classCallCheck = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -27022,7 +27022,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = TypedScrollView;
-},216,[3,48,182,1071,51,83,217,223,54,80,224,225,221,79,6,228,146,104,152]);
+},216,[3,48,182,1072,51,83,217,223,54,80,224,225,221,79,6,228,146,104,152]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -27711,7 +27711,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }
 
   module.exports = processDecelerationRate;
-},228,[1071]);
+},228,[1072]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -27891,7 +27891,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   RefreshControl.SIZE = RefreshLayoutConsts.SIZE;
   module.exports = RefreshControl;
-},232,[3,21,22,34,37,40,1071,51,83,146,178,71]);
+},232,[3,21,22,34,37,40,1072,51,83,146,178,71]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -30148,7 +30148,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = Image;
-},1075,[130,48,59,8,51,83,65,54,170,81,256,79,163,146,152]);
+},1076,[130,48,59,8,51,83,65,54,170,81,256,79,163,146,152]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -30223,7 +30223,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }
 
   module.exports = TVViewPropTypes;
-},257,[1071,258]);
+},257,[1072,258]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -30355,7 +30355,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   SectionList.defaultProps = defaultProps;
   module.exports = SectionList;
-},241,[3,21,22,34,37,40,48,211,1071,51,216,242]);
+},241,[3,21,22,34,37,40,48,211,1072,51,216,242]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -30860,7 +30860,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = CheckBox;
-},1076,[3,48,243,65,51,54,256,225,146]);
+},1077,[3,48,243,65,51,54,256,225,146]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -30922,7 +30922,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = DummyDatePickerIOS;
-},1077,[21,22,34,37,40,51,54,167,80]);
+},1078,[21,22,34,37,40,51,54,167,80]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -31095,7 +31095,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   });
   var AndroidDrawerLayout = requireNativeComponent('AndroidDrawerLayout');
   module.exports = DrawerLayoutAndroid;
-},1078,[3,48,60,243,1071,51,65,83,277,54,71,80,256,225,221,146]);
+},1079,[3,48,60,243,1072,51,65,83,277,54,71,80,256,225,221,146]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -31307,7 +31307,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     showHideTransition: 'fade'
   };
   module.exports = StatusBar;
-},277,[21,22,34,37,40,3,51,65,60,1071,74,8]);
+},277,[21,22,34,37,40,3,51,65,60,1072,74,8]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -31397,7 +31397,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }(React.Component);
 
   module.exports = ImageBackground;
-},251,[3,9,21,22,34,37,40,1075,51,54,80,252]);
+},251,[3,9,21,22,34,37,40,1076,51,54,80,252]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -31740,12 +31740,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     keyboardVerticalOffset: 0
   };
   module.exports = KeyboardAvoidingView;
-},259,[3,9,21,22,34,37,40,219,220,1071,51,54,80]);
+},259,[3,9,21,22,34,37,40,219,220,1072,51,54,80]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
   module.exports = _$$_REQUIRE(_dependencyMap[0]);
-},1079,[248]);
+},1080,[248]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -31974,7 +31974,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }, _defineProperty(_container, side, 0), _defineProperty(_container, "top", 0), _container)
   });
   module.exports = Modal;
-},261,[49,21,22,34,37,40,262,263,112,8,1071,51,65,54,80,70,146]);
+},261,[49,21,22,34,37,40,262,263,112,8,1072,51,65,54,80,70,146]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -32101,7 +32101,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   'use strict';
 
   module.exports = _$$_REQUIRE(_dependencyMap[0]);
-},1080,[248]);
+},1081,[248]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -32210,12 +32210,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     testID: PropTypes.string
   });
   module.exports = Picker;
-},266,[21,22,34,37,40,48,60,1081,1082,1071,51,65,170,72,248,256,73]);
+},266,[21,22,34,37,40,48,60,1082,1083,1072,51,65,170,72,248,256,73]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
   module.exports = _$$_REQUIRE(_dependencyMap[0]);
-},1081,[248]);
+},1082,[248]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -32379,7 +32379,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = PickerAndroid;
-},1082,[3,21,22,34,37,40,48,60,51,65,54,170,256,73,74,146]);
+},1083,[3,21,22,34,37,40,48,60,51,65,54,170,256,73,74,146]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -32441,12 +32441,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = DummyProgressViewIOS;
-},1083,[21,22,34,37,40,51,54,167,80]);
+},1084,[21,22,34,37,40,51,54,167,80]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
   module.exports = _$$_REQUIRE(_dependencyMap[0]);
-},1084,[80]);
+},1085,[80]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -32508,7 +32508,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = DummySegmentedControlIOS;
-},1085,[21,22,34,37,40,51,54,167,80]);
+},1086,[21,22,34,37,40,51,54,167,80]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -32574,12 +32574,12 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     });
   }
   module.exports = SliderWithRef;
-},273,[3,83,1071,51,54,146]);
+},273,[3,83,1072,51,54,146]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
   module.exports = _$$_REQUIRE(_dependencyMap[0]);
-},1086,[248]);
+},1087,[248]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -32714,7 +32714,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
 
   module.exports = Switch;
-},275,[3,9,21,22,34,37,40,276,1071,51,54]);
+},275,[3,9,21,22,34,37,40,276,1072,51,54]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -32726,7 +32726,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var SwitchNativeComponent = requireNativeComponent('AndroidSwitch');
   module.exports = SwitchNativeComponent;
-},276,[1071,83,146]);
+},276,[1072,83,146]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -33707,7 +33707,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = DummyTabBarIOS;
-},1087,[21,22,34,37,40,51,54,1088,80]);
+},1088,[21,22,34,37,40,51,54,1089,80]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -33763,7 +33763,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = DummyTab;
-},1088,[21,22,34,37,40,51,80,54]);
+},1089,[21,22,34,37,40,51,80,54]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -34256,7 +34256,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = TypedTextInput;
-},286,[21,22,34,37,40,3,48,60,287,42,243,1071,51,225,65,83,54,167,81,145,230,244,71,256,46,6,146,104]);
+},286,[21,22,34,37,40,3,48,60,287,42,243,1072,51,225,65,83,54,167,81,145,230,244,71,256,46,6,146,104]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -34664,7 +34664,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   };
   module.exports = ToastAndroid;
-},1089,[8]);
+},1090,[8]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -34768,7 +34768,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   });
   var NativeToolbar = requireNativeComponent('ToolbarAndroid');
   module.exports = ToolbarAndroid;
-},1090,[3,48,1075,243,51,65,71,256,60,225,146,152]);
+},1091,[3,48,1076,243,51,65,71,256,60,225,146,152]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -34970,7 +34970,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = TouchableHighlight;
-},294,[48,60,243,65,1071,51,162,54,172,244,80,256,225,245]);
+},294,[48,60,243,65,1072,51,162,54,172,244,80,256,225,245]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -35122,7 +35122,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     peekEnabled: PropTypes.bool
   });
   module.exports = ViewPagerAndroid;
-},1091,[3,48,21,22,34,37,40,36,51,65,83,71,256,221,146]);
+},1092,[3,48,21,22,34,37,40,36,51,65,83,71,256,221,146]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -35444,7 +35444,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
   module.exports = WebView;
-},1092,[48,3,21,22,34,37,40,169,47,51,65,83,54,71,80,256,298,70,63,146,152]);
+},1093,[48,3,21,22,34,37,40,169,47,51,65,83,54,71,80,256,298,70,63,146,152]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -35858,7 +35858,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }
 
   module.exports = renderApplication;
-},305,[3,262,51,306,6,1093,308,83]);
+},305,[3,262,51,306,6,1094,308,83]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -35939,7 +35939,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   };
   module.exports = BackHandler;
-},1093,[8,33]);
+},1094,[8,33]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -40063,7 +40063,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   };
   module.exports = BackAndroid;
-},313,[1093,104]);
+},313,[1094,104]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -40267,7 +40267,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }();
 
   module.exports = DatePickerAndroid;
-},1094,[130,21,22,8]);
+},1095,[130,21,22,8]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -40371,7 +40371,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }(NativeEventEmitter);
 
   module.exports = new Linking();
-},297,[21,22,34,37,40,112,8,1071,6]);
+},297,[21,22,34,37,40,112,8,1072,6]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -40494,7 +40494,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   };
   module.exports = NetInfo;
-},318,[88,112,8,1071]);
+},318,[88,112,8,1072]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -40769,7 +40769,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   };
   module.exports = Settings;
-},1095,[]);
+},1096,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -40822,14 +40822,14 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }();
 
   module.exports = Share;
-},321,[48,21,22,1071,6,74,8]);
+},321,[48,21,22,1072,6,74,8]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
   var NativeEventEmitter = _$$_REQUIRE(_dependencyMap[0]);
 
   module.exports = new NativeEventEmitter('StatusBarManager');
-},1096,[112]);
+},1097,[112]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -40878,7 +40878,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }();
 
   module.exports = TimePickerAndroid;
-},1097,[130,21,22,8]);
+},1098,[130,21,22,8]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -40931,7 +40931,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   };
   module.exports = Vibration;
-},324,[8,1071]);
+},324,[8,1072]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -40943,7 +40943,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   };
   module.exports = VibrationIOS;
-},1098,[104]);
+},1099,[104]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -58222,7 +58222,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
 
   exports.FlatList = FlatListWithGHScroll;
-},439,[1,9,3,21,22,34,37,40,49,48,51,5,74,172,440,65,1099]);
+},439,[1,9,3,21,22,34,37,40,49,48,51,5,74,172,440,65,1100]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -58399,7 +58399,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       flex: 1
     }
   });
-},1099,[1,21,22,34,37,40,48,51,5,957]);
+},1100,[1,21,22,34,37,40,48,51,5,957]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -58946,7 +58946,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _TouchableOpacity = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3]));
 
   var _TouchableHighlight = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4]));
-},443,[1,1100,445,447,448]);
+},443,[1,1101,445,447,448]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireWildcard = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -59068,7 +59068,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     background: _propTypes.default.string,
     style: _propTypes.default.object
   });
-},1100,[366,1,48,3,9,21,22,34,37,40,446,51,65]);
+},1101,[366,1,48,3,9,21,22,34,37,40,446,51,65]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireWildcard = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -64655,10 +64655,10 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     module: _$$_REQUIRE(_dependencyMap[0]),
     component: _$$_REQUIRE(_dependencyMap[1])
   };
-},479,[1101,1102]);
+},479,[1102,1103]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = _$$_REQUIRE(_dependencyMap[0]);
-},1101,[481]);
+},1102,[481]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -64859,7 +64859,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 },482,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = _$$_REQUIRE(_dependencyMap[0]);
-},1102,[484]);
+},1103,[484]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -65031,7 +65031,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }
 
   module.exports = SafeComponentCreate;
-},484,[5,482,1101]);
+},484,[5,482,1102]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireWildcard = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -106480,7 +106480,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   BlurView.propTypes = (0, _objectSpread2.default)({
     tint: _propTypes.default.oneOf(['light', 'default', 'dark'])
   }, _reactNative.ViewPropTypes);
-},1103,[366,1,48,3,9,21,22,34,37,40,65,51,5]);
+},1104,[366,1,48,3,9,21,22,34,37,40,65,51,5]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -106558,7 +106558,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   function _normalizePoint(point) {
     return Array.isArray(point) ? point : [point.x, point.y];
   }
-},885,[1,48,3,9,21,22,34,37,40,65,51,5,1104]);
+},885,[1,48,3,9,21,22,34,37,40,65,51,5,1105]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -106630,7 +106630,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   exports.default = NativeLinearGradient;
   var BaseNativeLinearGradient = (0, _reactNative.requireNativeComponent)('ExponentLinearGradient');
-},1104,[1,3,9,21,22,34,37,40,51,5]);
+},1105,[1,3,9,21,22,34,37,40,51,5]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -107962,7 +107962,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _default = (0, _reactNavigation.createAppContainer)(AppNavigator);
 
   exports.default = _default;
-},903,[1,904,5,1017,1019,1020,1069]);
+},903,[1,904,5,1017,1019,1069,1070]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = {
     get createAppContainer() {
@@ -122988,7 +122988,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _propTypes = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8]));
 
-  var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9]));
+  var _socket = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9]));
+
+  var _loader = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10]));
+
+  var _config = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11]));
+
+  var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[12]));
 
   var CreateGame = function (_React$Component) {
     (0, _inherits2.default)(CreateGame, _React$Component);
@@ -122999,7 +123005,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       (0, _classCallCheck2.default)(this, CreateGame);
       _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CreateGame).call(this, props));
       _this.state = {
-        name: 'Player 1'
+        name: 'Player 1',
+        loading: false
       };
       return _this;
     }
@@ -123009,11 +123016,15 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       value: function render() {
         var _this2 = this;
 
-        var name = this.state.name;
+        var _this$state = this.state,
+            name = _this$state.name,
+            loading = _this$state.loading;
         var navigation = this.props.navigation;
         return _react.default.createElement(_reactNative.View, {
           style: _styles.default.container
-        }, _react.default.createElement(_reactNative.TextInput, {
+        }, _react.default.createElement(_loader.default, {
+          loading: loading
+        }), _react.default.createElement(_reactNative.TextInput, {
           style: {
             height: 40,
             borderColor: 'gray',
@@ -123028,9 +123039,24 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           value: name
         }), _react.default.createElement(_reactNative.Button, {
           onPress: function onPress() {
-            return navigation.navigate('Lobby', {
-              type: 'create',
-              playerName: name
+            _this2.setState({
+              loading: true
+            });
+
+            _this2.socket = (0, _socket.default)(_config.default.SOCKET_SERVER_URL, {
+              transports: ['websocket']
+            });
+
+            _this2.socket.on('connect', function () {
+              _this2.setState({
+                loading: false
+              });
+
+              navigation.navigate('Lobby', {
+                type: 'create',
+                playerName: name,
+                socket: _this2.socket
+              });
             });
           },
           title: "Create"
@@ -123047,205 +123073,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   var _default = CreateGame;
   exports.default = _default;
-},1019,[1,21,22,34,37,40,51,5,65,1018]);
-__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0]);
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = undefined;
-
-  var _toConsumableArray2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1]));
-
-  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2]));
-
-  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3]));
-
-  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4]));
-
-  var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5]));
-
-  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6]));
-
-  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7]));
-
-  var _reactNative = _$$_REQUIRE(_dependencyMap[8]);
-
-  var _socket = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9]));
-
-  var _propTypes = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10]));
-
-  var _config = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11]));
-
-  var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[12]));
-
-  var Lobby = function (_React$Component) {
-    (0, _inherits2.default)(Lobby, _React$Component);
-
-    function Lobby(props) {
-      var _this;
-
-      (0, _classCallCheck2.default)(this, Lobby);
-      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Lobby).call(this, props));
-      _this.state = {
-        type: '',
-        roomId: '',
-        me: {
-          name: ''
-        },
-        players: []
-      };
-      return _this;
-    }
-
-    (0, _createClass2.default)(Lobby, [{
-      key: "componentDidMount",
-      value: function componentDidMount() {
-        var _this2 = this;
-
-        var navigation = this.props.navigation;
-        var joinRoomId = navigation.getParam('joinId', '');
-        this.setState({
-          type: navigation.getParam('type', 'create')
-        });
-        var type = navigation.getParam('type', 'create');
-        var player = {
-          name: navigation.getParam('playerName', '')
-        };
-        this.setState({
-          me: player
-        });
-        var connectRoomId = '';
-
-        if (type === 'join') {
-          this.setState({
-            roomId: joinRoomId
-          });
-          connectRoomId = joinRoomId;
-        } else if (type === 'create') {
-          connectRoomId = Math.floor(1000 + Math.random() * 9000).toString();
-          this.setState({
-            roomId: connectRoomId
-          });
-        }
-
-        this.socket = (0, _socket.default)(_config.default.SOCKET_SERVER_URL, {
-          transports: ['websocket']
-        });
-        this.socket.on('connect', function () {
-          _this2.setState(function (prevState) {
-            if (prevState.players.length === 0) return {
-              players: [player]
-            };
-            return {
-              players: [].concat((0, _toConsumableArray2.default)(prevState.players), [player])
-            };
-          });
-
-          _this2.socket.emit('join', connectRoomId);
-
-          _this2.socket.on('newPlayer', function (newPlayerInfo) {
-            _this2.setState(function (prevState) {
-              return {
-                players: [].concat((0, _toConsumableArray2.default)(prevState.players), [newPlayerInfo])
-              };
-            });
-          });
-
-          _this2.socket.on('clientDisconnect', function (client) {
-            var players = _this2.state.players;
-
-            _this2.setState({
-              players: players.filter(function (connectedClient) {
-                return connectedClient.name !== client.name;
-              })
-            });
-          });
-
-          if (type === 'join') {
-            _this2.socket.emit('newPlayer', player);
-
-            _this2.socket.on('getPlayersRet', function (playersRet) {
-              _this2.setState({
-                players: playersRet
-              });
-            });
-
-            _this2.socket.emit('getPlayers');
-
-            _this2.socket.on('hostDisconnect', function () {
-              _reactNative.Alert.alert('Host Disconnected', 'The Host has left the party', [{
-                text: 'OK'
-              }], {
-                cancelable: false
-              });
-
-              _this2.socket.disconnect();
-
-              navigation.navigate('JoinGame');
-            });
-          } else {
-            _this2.socket.on('getPlayers', function () {
-              var players = _this2.state.players;
-
-              _this2.socket.emit('getPlayersRet', players);
-            });
-          }
-        });
-      }
-    }, {
-      key: "componentWillUnmount",
-      value: function componentWillUnmount() {
-        var _this$state = this.state,
-            type = _this$state.type,
-            me = _this$state.me;
-
-        if (type === 'create') {
-          this.socket.emit('hostDisconnect');
-        } else if (type === 'join') {
-          this.socket.emit('clientDisconnect', me);
-        }
-
-        this.socket.emit('leaveRoom');
-        this.socket.disconnect();
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        var _this$state2 = this.state,
-            type = _this$state2.type,
-            roomId = _this$state2.roomId,
-            players = _this$state2.players;
-        return _react.default.createElement(_reactNative.View, {
-          style: _styles.default.container
-        }, _react.default.createElement(_reactNative.Text, null, "Hi"), _react.default.createElement(_reactNative.Text, null, "Number of Players in Lobby:", players.length), _react.default.createElement(_reactNative.Text, null, "Room Id:", roomId), _react.default.createElement(_reactNative.Text, null, "Players:"), players.map(function (item) {
-          return _react.default.createElement(_reactNative.Text, {
-            key: item.name
-          }, item.name);
-        }), type === 'create' ? _react.default.createElement(_reactNative.Button, {
-          title: "Start!",
-          onPress: function onPress() {
-            return _reactNative.Alert.alert('Not Implemented', 'Have to code the game from here', [{
-              text: 'OK'
-            }], {
-              cancelable: false
-            });
-          }
-        }) : _react.default.createElement(_reactNative.Text, null, "Waiting for host to start..."));
-      }
-    }]);
-    return Lobby;
-  }(_react.default.Component);
-
-  Lobby.propTypes = {
-    navigation: _propTypes.default.shape({
-      navigate: _propTypes.default.func.isRequired
-    }).isRequired
-  };
-  var _default = Lobby;
-  exports.default = _default;
-},1020,[1,17,21,22,34,37,40,51,5,1021,65,1068,1018]);
+},1019,[1,21,22,34,37,40,51,5,65,1020,1067,1068,1018]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var url = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -123296,7 +123124,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   exports.connect = lookup;
   exports.Manager = _$$_REQUIRE(_dependencyMap[2]);
   exports.Socket = _$$_REQUIRE(_dependencyMap[4]);
-},1021,[1022,1027,1035,1024,1063]);
+},1020,[1021,1026,1034,1023,1062]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var parseuri = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -123347,7 +123175,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     obj.href = obj.protocol + '://' + host + (loc && loc.port === obj.port ? '' : ':' + obj.port);
     return obj;
   }
-},1022,[1023,1024]);
+},1021,[1022,1023]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var re = /^(?:(?![^:@]+:[^:@\/]*@)(http|https|ws|wss):\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?((?:[a-f0-9]{0,4}:){2,7}[a-f0-9]{0,4}|[^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/;
   var parts = ['source', 'protocol', 'authority', 'userInfo', 'user', 'password', 'host', 'port', 'relative', 'path', 'directory', 'file', 'query', 'anchor'];
@@ -123378,7 +123206,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return uri;
   };
-},1023,[]);
+},1022,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports = module.exports = _$$_REQUIRE(_dependencyMap[0]);
   exports.log = log;
@@ -123463,7 +123291,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return window.localStorage;
     } catch (e) {}
   }
-},1024,[1025]);
+},1023,[1024]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports = module.exports = createDebug.debug = createDebug['default'] = createDebug;
   exports.coerce = coerce;
@@ -123612,7 +123440,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     if (val instanceof Error) return val.stack || val.message;
     return val;
   }
-},1025,[1026]);
+},1024,[1025]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var s = 1000;
   var m = 60000;
@@ -123730,7 +123558,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return Math.ceil(ms / n) + ' ' + name + 's';
   }
-},1026,[]);
+},1025,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var debug = _$$_REQUIRE(_dependencyMap[0])('socket.io-parser');
 
@@ -123970,7 +123798,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       data: 'parser error: ' + msg
     };
   }
-},1027,[1028,1031,1032,1033,1034]);
+},1026,[1027,1030,1031,1032,1033]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports = module.exports = _$$_REQUIRE(_dependencyMap[0]);
   exports.log = log;
@@ -124055,7 +123883,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return window.localStorage;
     } catch (e) {}
   }
-},1028,[1029]);
+},1027,[1028]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports = module.exports = createDebug.debug = createDebug['default'] = createDebug;
   exports.coerce = coerce;
@@ -124204,7 +124032,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     if (val instanceof Error) return val.stack || val.message;
     return val;
   }
-},1029,[1030]);
+},1028,[1029]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var s = 1000;
   var m = 60000;
@@ -124322,7 +124150,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return Math.ceil(ms / n) + ' ' + name + 's';
   }
-},1030,[]);
+},1029,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   if (typeof module !== 'undefined') {
     module.exports = Emitter;
@@ -124413,7 +124241,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   Emitter.prototype.hasListeners = function (event) {
     return !!this.listeners(event).length;
   };
-},1031,[]);
+},1030,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var isArray = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -124531,14 +124359,14 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       callback(bloblessData);
     }
   };
-},1032,[1033,1034]);
+},1031,[1032,1033]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var toString = {}.toString;
 
   module.exports = Array.isArray || function (arr) {
     return toString.call(arr) == '[object Array]';
   };
-},1033,[]);
+},1032,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = isBuf;
   var withNativeBuffer = typeof Buffer === 'function' && typeof Buffer.isBuffer === 'function';
@@ -124551,7 +124379,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   function isBuf(obj) {
     return withNativeBuffer && Buffer.isBuffer(obj) || withNativeArrayBuffer && (obj instanceof ArrayBuffer || isView(obj));
   }
-},1034,[]);
+},1033,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var eio = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -124915,11 +124743,11 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     this.updateSocketIds();
     this.emitAll('reconnect', attempt);
   };
-},1035,[1036,1063,1031,1027,1065,1066,1024,1062,1067]);
+},1034,[1035,1062,1030,1026,1064,1065,1023,1061,1066]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = _$$_REQUIRE(_dependencyMap[0]);
   module.exports.parser = _$$_REQUIRE(_dependencyMap[1]);
-},1036,[1037,1044]);
+},1035,[1036,1043]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var transports = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -125445,7 +125273,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return filteredUpgrades;
   };
-},1037,[1038,1031,1056,1062,1044,1023,1053,1043]);
+},1036,[1037,1030,1055,1061,1043,1022,1052,1042]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var XMLHttpRequest = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -125487,7 +125315,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return new JSONP(opts);
     }
   }
-},1038,[1039,1041,1059,1060]);
+},1037,[1038,1040,1058,1059]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var hasCORS = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -125514,14 +125342,14 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       } catch (e) {}
     }
   };
-},1039,[1040]);
+},1038,[1039]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   try {
     module.exports = typeof XMLHttpRequest !== 'undefined' && 'withCredentials' in new XMLHttpRequest();
   } catch (err) {
     module.exports = false;
   }
-},1040,[]);
+},1039,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var XMLHttpRequest = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -125824,7 +125652,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       }
     }
   }
-},1041,[1039,1042,1031,1054,1056]);
+},1040,[1038,1041,1030,1053,1055]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var Transport = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -125998,7 +125826,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     var ipv6 = this.hostname.indexOf(':') !== -1;
     return schema + '://' + (ipv6 ? '[' + this.hostname + ']' : this.hostname) + port + this.path + query;
   };
-},1042,[1043,1053,1044,1054,1055,1056,1039]);
+},1041,[1042,1052,1043,1053,1054,1055,1038]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var parser = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -126086,7 +125914,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     this.readyState = 'closed';
     this.emit('close');
   };
-},1043,[1044,1031]);
+},1042,[1043,1030]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var keys = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -126593,7 +126421,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       callback(exports.decodePacket(buffer, binaryType, true), i, total);
     });
   };
-},1044,[1045,1046,1048,1049,1050,1051,1052]);
+},1043,[1044,1045,1047,1048,1049,1050,1051]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = Object.keys || function keys(obj) {
     var arr = [];
@@ -126607,7 +126435,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return arr;
   };
-},1045,[]);
+},1044,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var isArray = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -126647,14 +126475,14 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return false;
   }
-},1046,[1047]);
+},1045,[1046]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var toString = {}.toString;
 
   module.exports = Array.isArray || function (arr) {
     return toString.call(arr) == '[object Array]';
   };
-},1047,[]);
+},1046,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = function (arraybuffer, start, end) {
     var bytes = arraybuffer.byteLength;
@@ -126690,7 +126518,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return result.buffer;
   };
-},1048,[]);
+},1047,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = after;
 
@@ -126718,7 +126546,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }
 
   function noop() {}
-},1049,[]);
+},1048,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var stringFromCharCode = String.fromCharCode;
 
@@ -126928,7 +126756,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     encode: utf8encode,
     decode: utf8decode
   };
-},1050,[]);
+},1049,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   (function () {
     "use strict";
@@ -126996,7 +126824,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return arraybuffer;
     };
   })();
-},1051,[]);
+},1050,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var BlobBuilder = typeof BlobBuilder !== 'undefined' ? BlobBuilder : typeof WebKitBlobBuilder !== 'undefined' ? WebKitBlobBuilder : typeof MSBlobBuilder !== 'undefined' ? MSBlobBuilder : typeof MozBlobBuilder !== 'undefined' ? MozBlobBuilder : false;
 
@@ -127069,7 +126897,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return undefined;
     }
   }();
-},1052,[]);
+},1051,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports.encode = function (obj) {
     var str = '';
@@ -127095,7 +126923,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return qry;
   };
-},1053,[]);
+},1052,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = function (a, b) {
     var fn = function fn() {};
@@ -127104,7 +126932,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     a.prototype = new fn();
     a.prototype.constructor = a;
   };
-},1054,[]);
+},1053,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -127149,7 +126977,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   yeast.encode = encode;
   yeast.decode = decode;
   module.exports = yeast;
-},1055,[]);
+},1054,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports = module.exports = _$$_REQUIRE(_dependencyMap[0]);
   exports.log = log;
@@ -127234,7 +127062,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return window.localStorage;
     } catch (e) {}
   }
-},1056,[1057]);
+},1055,[1056]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports = module.exports = createDebug.debug = createDebug['default'] = createDebug;
   exports.coerce = coerce;
@@ -127383,7 +127211,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     if (val instanceof Error) return val.stack || val.message;
     return val;
   }
-},1057,[1058]);
+},1056,[1057]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var s = 1000;
   var m = 60000;
@@ -127501,7 +127329,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return Math.ceil(ms / n) + ' ' + name + 's';
   }
-},1058,[]);
+},1057,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var Polling = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -127665,7 +127493,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       this.iframe.onload = complete;
     }
   };
-},1059,[1042,1054]);
+},1058,[1041,1053]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var Transport = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -127871,8 +127699,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   WS.prototype.check = function () {
     return !!WebSocketImpl && !('__initialize' in WebSocketImpl && this.name === WS.prototype.name);
   };
-},1060,[1043,1044,1053,1054,1055,1056,1061]);
-__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {},1061,[]);
+},1059,[1042,1043,1052,1053,1054,1055,1060]);
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {},1060,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var indexOf = [].indexOf;
 
@@ -127885,7 +127713,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return -1;
   };
-},1062,[]);
+},1061,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var parser = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -128173,7 +128001,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     this.flags.binary = binary;
     return this;
   };
-},1063,[1027,1031,1064,1065,1066,1024,1053,1046]);
+},1062,[1026,1030,1063,1064,1065,1023,1052,1045]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = toArray;
 
@@ -128187,7 +128015,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return array;
   }
-},1064,[]);
+},1063,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = on;
 
@@ -128199,7 +128027,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       }
     };
   }
-},1065,[]);
+},1064,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var slice = [].slice;
 
@@ -128211,7 +128039,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return fn.apply(obj, args.concat(slice.call(arguments)));
     };
   };
-},1066,[]);
+},1065,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = Backoff;
 
@@ -128251,7 +128079,61 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   Backoff.prototype.setJitter = function (jitter) {
     this.jitter = jitter;
   };
-},1067,[]);
+},1066,[]);
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0]);
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = undefined;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1]));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[2]);
+
+  var _propTypes = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3]));
+
+  var styles = _reactNative.StyleSheet.create({
+    modalBackground: {
+      flex: 1,
+      alignItems: 'center',
+      flexDirection: 'column',
+      justifyContent: 'space-around',
+      backgroundColor: '#00000040'
+    },
+    activityIndicatorWrapper: {
+      backgroundColor: '#FFFFFF',
+      height: 125,
+      width: 125,
+      borderRadius: 10,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-around'
+    }
+  });
+
+  var Loader = function Loader(props) {
+    var loading = props.loading;
+    return _react.default.createElement(_reactNative.Modal, {
+      transparent: true,
+      animationType: "none",
+      visible: loading
+    }, _react.default.createElement(_reactNative.View, {
+      style: styles.modalBackground
+    }, _react.default.createElement(_reactNative.View, {
+      style: styles.activityIndicatorWrapper
+    }, _react.default.createElement(_reactNative.ActivityIndicator, {
+      animating: loading
+    }))));
+  };
+
+  Loader.propTypes = {
+    loading: _propTypes.default.bool.isRequired
+  };
+  var _default = Loader;
+  exports.default = _default;
+},1067,[1,51,5,65]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -128263,6 +128145,196 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   exports.default = _default;
 },1068,[]);
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0]);
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = undefined;
+
+  var _toConsumableArray2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1]));
+
+  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2]));
+
+  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3]));
+
+  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4]));
+
+  var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5]));
+
+  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6]));
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7]));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[8]);
+
+  var _propTypes = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9]));
+
+  var _loader = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10]));
+
+  var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11]));
+
+  var Lobby = function (_React$Component) {
+    (0, _inherits2.default)(Lobby, _React$Component);
+
+    function Lobby(props) {
+      var _this;
+
+      (0, _classCallCheck2.default)(this, Lobby);
+      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Lobby).call(this, props));
+      _this.state = {
+        type: '',
+        roomId: '',
+        loading: false,
+        me: {
+          name: ''
+        },
+        players: []
+      };
+      return _this;
+    }
+
+    (0, _createClass2.default)(Lobby, [{
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        var _this2 = this;
+
+        var navigation = this.props.navigation;
+        var joinRoomId = navigation.getParam('joinId', '');
+        this.setState({
+          type: navigation.getParam('type', 'create')
+        });
+        var type = navigation.getParam('type', 'create');
+        var player = {
+          name: navigation.getParam('playerName', '')
+        };
+        this.setState({
+          me: player
+        });
+        var connectRoomId = '';
+
+        if (type === 'join') {
+          this.setState({
+            roomId: joinRoomId
+          });
+          connectRoomId = joinRoomId;
+        } else if (type === 'create') {
+          connectRoomId = Math.floor(1000 + Math.random() * 9000).toString();
+          this.setState({
+            roomId: connectRoomId
+          });
+        }
+
+        this.socket = navigation.getParam('socket', {});
+        this.setState(function (prevState) {
+          if (prevState.players.length === 0) return {
+            players: [player]
+          };
+          return {
+            players: [].concat((0, _toConsumableArray2.default)(prevState.players), [player])
+          };
+        });
+        this.socket.emit('join', connectRoomId);
+        this.socket.on('newPlayer', function (newPlayerInfo) {
+          _this2.setState(function (prevState) {
+            return {
+              players: [].concat((0, _toConsumableArray2.default)(prevState.players), [newPlayerInfo])
+            };
+          });
+        });
+        this.socket.on('clientDisconnect', function (client) {
+          var players = _this2.state.players;
+
+          _this2.setState({
+            players: players.filter(function (connectedClient) {
+              return connectedClient.name !== client.name;
+            })
+          });
+        });
+
+        if (type === 'join') {
+          this.socket.emit('newPlayer', player);
+          this.socket.on('getPlayersRet', function (playersRet) {
+            _this2.setState({
+              players: playersRet
+            });
+          });
+          this.socket.emit('getPlayers');
+          this.socket.on('hostDisconnect', function () {
+            _reactNative.Alert.alert('Host Disconnected', 'The Host has left the party', [{
+              text: 'OK'
+            }], {
+              cancelable: false
+            });
+
+            _this2.socket.disconnect();
+
+            navigation.navigate('JoinGame');
+          });
+        } else {
+          this.socket.on('getPlayers', function () {
+            var players = _this2.state.players;
+
+            _this2.socket.emit('getPlayersRet', players);
+          });
+        }
+      }
+    }, {
+      key: "componentWillUnmount",
+      value: function componentWillUnmount() {
+        var _this$state = this.state,
+            type = _this$state.type,
+            me = _this$state.me;
+
+        if (type === 'create') {
+          this.socket.emit('hostDisconnect');
+        } else if (type === 'join') {
+          this.socket.emit('clientDisconnect', me);
+        }
+
+        this.socket.emit('leaveRoom');
+        this.socket.disconnect();
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _this$state2 = this.state,
+            type = _this$state2.type,
+            roomId = _this$state2.roomId,
+            players = _this$state2.players,
+            loading = _this$state2.loading;
+        return _react.default.createElement(_reactNative.View, {
+          style: _styles.default.container
+        }, _react.default.createElement(_loader.default, {
+          loading: loading
+        }), _react.default.createElement(_reactNative.Text, null, "Hi"), _react.default.createElement(_reactNative.Text, null, "Number of Players in Lobby:", players.length), _react.default.createElement(_reactNative.Text, null, "Room Id:", roomId), _react.default.createElement(_reactNative.Text, null, "Players:"), players.map(function (item) {
+          return _react.default.createElement(_reactNative.Text, {
+            key: item.name
+          }, item.name);
+        }), type === 'create' ? _react.default.createElement(_reactNative.Button, {
+          title: "Start!",
+          onPress: function onPress() {
+            return _reactNative.Alert.alert('Not Implemented', 'Have to code the game from here', [{
+              text: 'OK'
+            }], {
+              cancelable: false
+            });
+          }
+        }) : _react.default.createElement(_reactNative.Text, null, "Waiting for host to start..."));
+      }
+    }]);
+    return Lobby;
+  }(_react.default.Component);
+
+  Lobby.propTypes = {
+    navigation: _propTypes.default.shape({
+      navigate: _propTypes.default.func.isRequired
+    }).isRequired
+  };
+  var _default = Lobby;
+  exports.default = _default;
+},1069,[1,17,21,22,34,37,40,51,5,65,1067,1018]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -128289,9 +128361,11 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _socket = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9]));
 
-  var _config = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10]));
+  var _loader = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10]));
 
-  var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11]));
+  var _config = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11]));
+
+  var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[12]));
 
   var JoinGame = function (_React$Component) {
     (0, _inherits2.default)(JoinGame, _React$Component);
@@ -128303,7 +128377,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(JoinGame).call(this, props));
       _this.state = {
         name: 'Player 2',
-        roomId: ''
+        roomId: '',
+        loading: false
       };
       return _this;
     }
@@ -128313,11 +128388,15 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       value: function render() {
         var _this2 = this;
 
-        var roomId = this.state.roomId;
-        var name = this.state.name;
+        var _this$state = this.state,
+            roomId = _this$state.roomId,
+            name = _this$state.name,
+            loading = _this$state.loading;
         return _react.default.createElement(_reactNative.View, {
           style: _styles.default.container
-        }, _react.default.createElement(_reactNative.TextInput, {
+        }, _react.default.createElement(_loader.default, {
+          loading: loading
+        }), _react.default.createElement(_reactNative.TextInput, {
           style: {
             height: 40,
             borderColor: 'gray',
@@ -128346,11 +128425,20 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
         }), _react.default.createElement(_reactNative.Button, {
           onPress: function onPress() {
             var navigation = _this2.props.navigation;
+
+            _this2.setState({
+              loading: true
+            });
+
             _this2.socket = (0, _socket.default)(_config.default.SOCKET_SERVER_URL, {
               transports: ['websocket']
             });
 
             _this2.socket.on('connect', function () {
+              _this2.setState({
+                loading: false
+              });
+
               _this2.socket.emit('getRoomInfo', roomId);
 
               _this2.socket.on('roomInfo', function (info) {
@@ -128362,21 +128450,21 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
                   });
 
                   _this2.socket.disconnect();
-
-                  navigation.navigate('JoinGame');
                 } else {
-                  _this2.socket.disconnect();
+                  _this2.socket.removeAllListeners();
 
                   navigation.navigate('Lobby', {
                     type: 'join',
+                    playerName: name,
                     joinId: roomId,
-                    playerName: name
+                    socket: _this2.socket
                   });
                 }
               });
             });
           },
-          title: "Join"
+          title: "Join",
+          disabled: roomId.length < 1
         }));
       }
     }]);
@@ -128390,7 +128478,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   var _default = JoinGame;
   exports.default = _default;
-},1069,[1,21,22,34,37,40,51,5,65,1021,1068,1018]);
+},1070,[1,21,22,34,37,40,51,5,65,1020,1067,1068,1018]);
 __r(85);
 __r(0);
 //# sourceMappingURL=http://127.0.0.1:19001/node_modules/expo/AppEntry.map?dev=false&hot=false&assetPlugin=%2Fhome%2Frokologik%2FtestWorkspace%2Fowowolf%2Fnode_modules%2Fexpo%2Ftools%2FhashAssetFiles.js&platform=android

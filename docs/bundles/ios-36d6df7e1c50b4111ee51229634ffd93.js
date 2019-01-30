@@ -108027,7 +108027,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _default = (0, _reactNavigation.createAppContainer)(AppNavigator);
 
   exports.default = _default;
-},903,[1,904,5,1017,1019,1020,1069]);
+},903,[1,904,5,1017,1019,1069,1070]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = {
     get createAppContainer() {
@@ -123119,7 +123119,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _propTypes = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8]));
 
-  var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9]));
+  var _socket = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9]));
+
+  var _loader = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10]));
+
+  var _config = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11]));
+
+  var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[12]));
 
   var CreateGame = function (_React$Component) {
     (0, _inherits2.default)(CreateGame, _React$Component);
@@ -123130,7 +123136,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       (0, _classCallCheck2.default)(this, CreateGame);
       _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CreateGame).call(this, props));
       _this.state = {
-        name: 'Player 1'
+        name: 'Player 1',
+        loading: false
       };
       return _this;
     }
@@ -123140,11 +123147,15 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       value: function render() {
         var _this2 = this;
 
-        var name = this.state.name;
+        var _this$state = this.state,
+            name = _this$state.name,
+            loading = _this$state.loading;
         var navigation = this.props.navigation;
         return _react.default.createElement(_reactNative.View, {
           style: _styles.default.container
-        }, _react.default.createElement(_reactNative.TextInput, {
+        }, _react.default.createElement(_loader.default, {
+          loading: loading
+        }), _react.default.createElement(_reactNative.TextInput, {
           style: {
             height: 40,
             borderColor: 'gray',
@@ -123159,9 +123170,24 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           value: name
         }), _react.default.createElement(_reactNative.Button, {
           onPress: function onPress() {
-            return navigation.navigate('Lobby', {
-              type: 'create',
-              playerName: name
+            _this2.setState({
+              loading: true
+            });
+
+            _this2.socket = (0, _socket.default)(_config.default.SOCKET_SERVER_URL, {
+              transports: ['websocket']
+            });
+
+            _this2.socket.on('connect', function () {
+              _this2.setState({
+                loading: false
+              });
+
+              navigation.navigate('Lobby', {
+                type: 'create',
+                playerName: name,
+                socket: _this2.socket
+              });
             });
           },
           title: "Create"
@@ -123178,205 +123204,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   var _default = CreateGame;
   exports.default = _default;
-},1019,[1,21,22,34,37,40,51,5,65,1018]);
-__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0]);
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  exports.default = undefined;
-
-  var _toConsumableArray2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1]));
-
-  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2]));
-
-  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3]));
-
-  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4]));
-
-  var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5]));
-
-  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6]));
-
-  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7]));
-
-  var _reactNative = _$$_REQUIRE(_dependencyMap[8]);
-
-  var _socket = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9]));
-
-  var _propTypes = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10]));
-
-  var _config = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11]));
-
-  var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[12]));
-
-  var Lobby = function (_React$Component) {
-    (0, _inherits2.default)(Lobby, _React$Component);
-
-    function Lobby(props) {
-      var _this;
-
-      (0, _classCallCheck2.default)(this, Lobby);
-      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Lobby).call(this, props));
-      _this.state = {
-        type: '',
-        roomId: '',
-        me: {
-          name: ''
-        },
-        players: []
-      };
-      return _this;
-    }
-
-    (0, _createClass2.default)(Lobby, [{
-      key: "componentDidMount",
-      value: function componentDidMount() {
-        var _this2 = this;
-
-        var navigation = this.props.navigation;
-        var joinRoomId = navigation.getParam('joinId', '');
-        this.setState({
-          type: navigation.getParam('type', 'create')
-        });
-        var type = navigation.getParam('type', 'create');
-        var player = {
-          name: navigation.getParam('playerName', '')
-        };
-        this.setState({
-          me: player
-        });
-        var connectRoomId = '';
-
-        if (type === 'join') {
-          this.setState({
-            roomId: joinRoomId
-          });
-          connectRoomId = joinRoomId;
-        } else if (type === 'create') {
-          connectRoomId = Math.floor(1000 + Math.random() * 9000).toString();
-          this.setState({
-            roomId: connectRoomId
-          });
-        }
-
-        this.socket = (0, _socket.default)(_config.default.SOCKET_SERVER_URL, {
-          transports: ['websocket']
-        });
-        this.socket.on('connect', function () {
-          _this2.setState(function (prevState) {
-            if (prevState.players.length === 0) return {
-              players: [player]
-            };
-            return {
-              players: [].concat((0, _toConsumableArray2.default)(prevState.players), [player])
-            };
-          });
-
-          _this2.socket.emit('join', connectRoomId);
-
-          _this2.socket.on('newPlayer', function (newPlayerInfo) {
-            _this2.setState(function (prevState) {
-              return {
-                players: [].concat((0, _toConsumableArray2.default)(prevState.players), [newPlayerInfo])
-              };
-            });
-          });
-
-          _this2.socket.on('clientDisconnect', function (client) {
-            var players = _this2.state.players;
-
-            _this2.setState({
-              players: players.filter(function (connectedClient) {
-                return connectedClient.name !== client.name;
-              })
-            });
-          });
-
-          if (type === 'join') {
-            _this2.socket.emit('newPlayer', player);
-
-            _this2.socket.on('getPlayersRet', function (playersRet) {
-              _this2.setState({
-                players: playersRet
-              });
-            });
-
-            _this2.socket.emit('getPlayers');
-
-            _this2.socket.on('hostDisconnect', function () {
-              _reactNative.Alert.alert('Host Disconnected', 'The Host has left the party', [{
-                text: 'OK'
-              }], {
-                cancelable: false
-              });
-
-              _this2.socket.disconnect();
-
-              navigation.navigate('JoinGame');
-            });
-          } else {
-            _this2.socket.on('getPlayers', function () {
-              var players = _this2.state.players;
-
-              _this2.socket.emit('getPlayersRet', players);
-            });
-          }
-        });
-      }
-    }, {
-      key: "componentWillUnmount",
-      value: function componentWillUnmount() {
-        var _this$state = this.state,
-            type = _this$state.type,
-            me = _this$state.me;
-
-        if (type === 'create') {
-          this.socket.emit('hostDisconnect');
-        } else if (type === 'join') {
-          this.socket.emit('clientDisconnect', me);
-        }
-
-        this.socket.emit('leaveRoom');
-        this.socket.disconnect();
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        var _this$state2 = this.state,
-            type = _this$state2.type,
-            roomId = _this$state2.roomId,
-            players = _this$state2.players;
-        return _react.default.createElement(_reactNative.View, {
-          style: _styles.default.container
-        }, _react.default.createElement(_reactNative.Text, null, "Hi"), _react.default.createElement(_reactNative.Text, null, "Number of Players in Lobby:", players.length), _react.default.createElement(_reactNative.Text, null, "Room Id:", roomId), _react.default.createElement(_reactNative.Text, null, "Players:"), players.map(function (item) {
-          return _react.default.createElement(_reactNative.Text, {
-            key: item.name
-          }, item.name);
-        }), type === 'create' ? _react.default.createElement(_reactNative.Button, {
-          title: "Start!",
-          onPress: function onPress() {
-            return _reactNative.Alert.alert('Not Implemented', 'Have to code the game from here', [{
-              text: 'OK'
-            }], {
-              cancelable: false
-            });
-          }
-        }) : _react.default.createElement(_reactNative.Text, null, "Waiting for host to start..."));
-      }
-    }]);
-    return Lobby;
-  }(_react.default.Component);
-
-  Lobby.propTypes = {
-    navigation: _propTypes.default.shape({
-      navigate: _propTypes.default.func.isRequired
-    }).isRequired
-  };
-  var _default = Lobby;
-  exports.default = _default;
-},1020,[1,17,21,22,34,37,40,51,5,1021,65,1068,1018]);
+},1019,[1,21,22,34,37,40,51,5,65,1020,1067,1068,1018]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var url = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -123427,7 +123255,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   exports.connect = lookup;
   exports.Manager = _$$_REQUIRE(_dependencyMap[2]);
   exports.Socket = _$$_REQUIRE(_dependencyMap[4]);
-},1021,[1022,1027,1035,1024,1063]);
+},1020,[1021,1026,1034,1023,1062]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var parseuri = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -123478,7 +123306,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     obj.href = obj.protocol + '://' + host + (loc && loc.port === obj.port ? '' : ':' + obj.port);
     return obj;
   }
-},1022,[1023,1024]);
+},1021,[1022,1023]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var re = /^(?:(?![^:@]+:[^:@\/]*@)(http|https|ws|wss):\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?((?:[a-f0-9]{0,4}:){2,7}[a-f0-9]{0,4}|[^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/;
   var parts = ['source', 'protocol', 'authority', 'userInfo', 'user', 'password', 'host', 'port', 'relative', 'path', 'directory', 'file', 'query', 'anchor'];
@@ -123509,7 +123337,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return uri;
   };
-},1023,[]);
+},1022,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports = module.exports = _$$_REQUIRE(_dependencyMap[0]);
   exports.log = log;
@@ -123594,7 +123422,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return window.localStorage;
     } catch (e) {}
   }
-},1024,[1025]);
+},1023,[1024]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports = module.exports = createDebug.debug = createDebug['default'] = createDebug;
   exports.coerce = coerce;
@@ -123743,7 +123571,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     if (val instanceof Error) return val.stack || val.message;
     return val;
   }
-},1025,[1026]);
+},1024,[1025]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var s = 1000;
   var m = 60000;
@@ -123861,7 +123689,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return Math.ceil(ms / n) + ' ' + name + 's';
   }
-},1026,[]);
+},1025,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var debug = _$$_REQUIRE(_dependencyMap[0])('socket.io-parser');
 
@@ -124101,7 +123929,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       data: 'parser error: ' + msg
     };
   }
-},1027,[1028,1031,1032,1033,1034]);
+},1026,[1027,1030,1031,1032,1033]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports = module.exports = _$$_REQUIRE(_dependencyMap[0]);
   exports.log = log;
@@ -124186,7 +124014,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return window.localStorage;
     } catch (e) {}
   }
-},1028,[1029]);
+},1027,[1028]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports = module.exports = createDebug.debug = createDebug['default'] = createDebug;
   exports.coerce = coerce;
@@ -124335,7 +124163,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     if (val instanceof Error) return val.stack || val.message;
     return val;
   }
-},1029,[1030]);
+},1028,[1029]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var s = 1000;
   var m = 60000;
@@ -124453,7 +124281,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return Math.ceil(ms / n) + ' ' + name + 's';
   }
-},1030,[]);
+},1029,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   if (typeof module !== 'undefined') {
     module.exports = Emitter;
@@ -124544,7 +124372,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   Emitter.prototype.hasListeners = function (event) {
     return !!this.listeners(event).length;
   };
-},1031,[]);
+},1030,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var isArray = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -124662,14 +124490,14 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       callback(bloblessData);
     }
   };
-},1032,[1033,1034]);
+},1031,[1032,1033]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var toString = {}.toString;
 
   module.exports = Array.isArray || function (arr) {
     return toString.call(arr) == '[object Array]';
   };
-},1033,[]);
+},1032,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = isBuf;
   var withNativeBuffer = typeof Buffer === 'function' && typeof Buffer.isBuffer === 'function';
@@ -124682,7 +124510,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   function isBuf(obj) {
     return withNativeBuffer && Buffer.isBuffer(obj) || withNativeArrayBuffer && (obj instanceof ArrayBuffer || isView(obj));
   }
-},1034,[]);
+},1033,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var eio = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -125046,11 +124874,11 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     this.updateSocketIds();
     this.emitAll('reconnect', attempt);
   };
-},1035,[1036,1063,1031,1027,1065,1066,1024,1062,1067]);
+},1034,[1035,1062,1030,1026,1064,1065,1023,1061,1066]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = _$$_REQUIRE(_dependencyMap[0]);
   module.exports.parser = _$$_REQUIRE(_dependencyMap[1]);
-},1036,[1037,1044]);
+},1035,[1036,1043]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var transports = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -125576,7 +125404,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return filteredUpgrades;
   };
-},1037,[1038,1031,1056,1062,1044,1023,1053,1043]);
+},1036,[1037,1030,1055,1061,1043,1022,1052,1042]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var XMLHttpRequest = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -125618,7 +125446,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return new JSONP(opts);
     }
   }
-},1038,[1039,1041,1059,1060]);
+},1037,[1038,1040,1058,1059]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var hasCORS = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -125645,14 +125473,14 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       } catch (e) {}
     }
   };
-},1039,[1040]);
+},1038,[1039]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   try {
     module.exports = typeof XMLHttpRequest !== 'undefined' && 'withCredentials' in new XMLHttpRequest();
   } catch (err) {
     module.exports = false;
   }
-},1040,[]);
+},1039,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var XMLHttpRequest = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -125955,7 +125783,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       }
     }
   }
-},1041,[1039,1042,1031,1054,1056]);
+},1040,[1038,1041,1030,1053,1055]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var Transport = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -126129,7 +125957,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     var ipv6 = this.hostname.indexOf(':') !== -1;
     return schema + '://' + (ipv6 ? '[' + this.hostname + ']' : this.hostname) + port + this.path + query;
   };
-},1042,[1043,1053,1044,1054,1055,1056,1039]);
+},1041,[1042,1052,1043,1053,1054,1055,1038]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var parser = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -126217,7 +126045,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     this.readyState = 'closed';
     this.emit('close');
   };
-},1043,[1044,1031]);
+},1042,[1043,1030]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var keys = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -126724,7 +126552,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       callback(exports.decodePacket(buffer, binaryType, true), i, total);
     });
   };
-},1044,[1045,1046,1048,1049,1050,1051,1052]);
+},1043,[1044,1045,1047,1048,1049,1050,1051]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = Object.keys || function keys(obj) {
     var arr = [];
@@ -126738,7 +126566,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return arr;
   };
-},1045,[]);
+},1044,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var isArray = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -126778,14 +126606,14 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return false;
   }
-},1046,[1047]);
+},1045,[1046]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var toString = {}.toString;
 
   module.exports = Array.isArray || function (arr) {
     return toString.call(arr) == '[object Array]';
   };
-},1047,[]);
+},1046,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = function (arraybuffer, start, end) {
     var bytes = arraybuffer.byteLength;
@@ -126821,7 +126649,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return result.buffer;
   };
-},1048,[]);
+},1047,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = after;
 
@@ -126849,7 +126677,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }
 
   function noop() {}
-},1049,[]);
+},1048,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var stringFromCharCode = String.fromCharCode;
 
@@ -127059,7 +126887,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     encode: utf8encode,
     decode: utf8decode
   };
-},1050,[]);
+},1049,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   (function () {
     "use strict";
@@ -127127,7 +126955,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return arraybuffer;
     };
   })();
-},1051,[]);
+},1050,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var BlobBuilder = typeof BlobBuilder !== 'undefined' ? BlobBuilder : typeof WebKitBlobBuilder !== 'undefined' ? WebKitBlobBuilder : typeof MSBlobBuilder !== 'undefined' ? MSBlobBuilder : typeof MozBlobBuilder !== 'undefined' ? MozBlobBuilder : false;
 
@@ -127200,7 +127028,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return undefined;
     }
   }();
-},1052,[]);
+},1051,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports.encode = function (obj) {
     var str = '';
@@ -127226,7 +127054,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return qry;
   };
-},1053,[]);
+},1052,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = function (a, b) {
     var fn = function fn() {};
@@ -127235,7 +127063,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     a.prototype = new fn();
     a.prototype.constructor = a;
   };
-},1054,[]);
+},1053,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -127280,7 +127108,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   yeast.encode = encode;
   yeast.decode = decode;
   module.exports = yeast;
-},1055,[]);
+},1054,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports = module.exports = _$$_REQUIRE(_dependencyMap[0]);
   exports.log = log;
@@ -127365,7 +127193,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return window.localStorage;
     } catch (e) {}
   }
-},1056,[1057]);
+},1055,[1056]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   exports = module.exports = createDebug.debug = createDebug['default'] = createDebug;
   exports.coerce = coerce;
@@ -127514,7 +127342,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     if (val instanceof Error) return val.stack || val.message;
     return val;
   }
-},1057,[1058]);
+},1056,[1057]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var s = 1000;
   var m = 60000;
@@ -127632,7 +127460,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return Math.ceil(ms / n) + ' ' + name + 's';
   }
-},1058,[]);
+},1057,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var Polling = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -127796,7 +127624,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       this.iframe.onload = complete;
     }
   };
-},1059,[1042,1054]);
+},1058,[1041,1053]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var Transport = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -128002,8 +127830,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   WS.prototype.check = function () {
     return !!WebSocketImpl && !('__initialize' in WebSocketImpl && this.name === WS.prototype.name);
   };
-},1060,[1043,1044,1053,1054,1055,1056,1061]);
-__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {},1061,[]);
+},1059,[1042,1043,1052,1053,1054,1055,1060]);
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {},1060,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var indexOf = [].indexOf;
 
@@ -128016,7 +127844,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return -1;
   };
-},1062,[]);
+},1061,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var parser = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -128304,7 +128132,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     this.flags.binary = binary;
     return this;
   };
-},1063,[1027,1031,1064,1065,1066,1024,1053,1046]);
+},1062,[1026,1030,1063,1064,1065,1023,1052,1045]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = toArray;
 
@@ -128318,7 +128146,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     return array;
   }
-},1064,[]);
+},1063,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = on;
 
@@ -128330,7 +128158,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       }
     };
   }
-},1065,[]);
+},1064,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var slice = [].slice;
 
@@ -128342,7 +128170,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       return fn.apply(obj, args.concat(slice.call(arguments)));
     };
   };
-},1066,[]);
+},1065,[]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   module.exports = Backoff;
 
@@ -128382,7 +128210,61 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   Backoff.prototype.setJitter = function (jitter) {
     this.jitter = jitter;
   };
-},1067,[]);
+},1066,[]);
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0]);
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = undefined;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1]));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[2]);
+
+  var _propTypes = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3]));
+
+  var styles = _reactNative.StyleSheet.create({
+    modalBackground: {
+      flex: 1,
+      alignItems: 'center',
+      flexDirection: 'column',
+      justifyContent: 'space-around',
+      backgroundColor: '#00000040'
+    },
+    activityIndicatorWrapper: {
+      backgroundColor: '#FFFFFF',
+      height: 125,
+      width: 125,
+      borderRadius: 10,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-around'
+    }
+  });
+
+  var Loader = function Loader(props) {
+    var loading = props.loading;
+    return _react.default.createElement(_reactNative.Modal, {
+      transparent: true,
+      animationType: "none",
+      visible: loading
+    }, _react.default.createElement(_reactNative.View, {
+      style: styles.modalBackground
+    }, _react.default.createElement(_reactNative.View, {
+      style: styles.activityIndicatorWrapper
+    }, _react.default.createElement(_reactNative.ActivityIndicator, {
+      animating: loading
+    }))));
+  };
+
+  Loader.propTypes = {
+    loading: _propTypes.default.bool.isRequired
+  };
+  var _default = Loader;
+  exports.default = _default;
+},1067,[1,51,5,65]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -128394,6 +128276,196 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   exports.default = _default;
 },1068,[]);
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0]);
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = undefined;
+
+  var _toConsumableArray2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1]));
+
+  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2]));
+
+  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3]));
+
+  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4]));
+
+  var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5]));
+
+  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6]));
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7]));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[8]);
+
+  var _propTypes = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9]));
+
+  var _loader = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10]));
+
+  var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11]));
+
+  var Lobby = function (_React$Component) {
+    (0, _inherits2.default)(Lobby, _React$Component);
+
+    function Lobby(props) {
+      var _this;
+
+      (0, _classCallCheck2.default)(this, Lobby);
+      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Lobby).call(this, props));
+      _this.state = {
+        type: '',
+        roomId: '',
+        loading: false,
+        me: {
+          name: ''
+        },
+        players: []
+      };
+      return _this;
+    }
+
+    (0, _createClass2.default)(Lobby, [{
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        var _this2 = this;
+
+        var navigation = this.props.navigation;
+        var joinRoomId = navigation.getParam('joinId', '');
+        this.setState({
+          type: navigation.getParam('type', 'create')
+        });
+        var type = navigation.getParam('type', 'create');
+        var player = {
+          name: navigation.getParam('playerName', '')
+        };
+        this.setState({
+          me: player
+        });
+        var connectRoomId = '';
+
+        if (type === 'join') {
+          this.setState({
+            roomId: joinRoomId
+          });
+          connectRoomId = joinRoomId;
+        } else if (type === 'create') {
+          connectRoomId = Math.floor(1000 + Math.random() * 9000).toString();
+          this.setState({
+            roomId: connectRoomId
+          });
+        }
+
+        this.socket = navigation.getParam('socket', {});
+        this.setState(function (prevState) {
+          if (prevState.players.length === 0) return {
+            players: [player]
+          };
+          return {
+            players: [].concat((0, _toConsumableArray2.default)(prevState.players), [player])
+          };
+        });
+        this.socket.emit('join', connectRoomId);
+        this.socket.on('newPlayer', function (newPlayerInfo) {
+          _this2.setState(function (prevState) {
+            return {
+              players: [].concat((0, _toConsumableArray2.default)(prevState.players), [newPlayerInfo])
+            };
+          });
+        });
+        this.socket.on('clientDisconnect', function (client) {
+          var players = _this2.state.players;
+
+          _this2.setState({
+            players: players.filter(function (connectedClient) {
+              return connectedClient.name !== client.name;
+            })
+          });
+        });
+
+        if (type === 'join') {
+          this.socket.emit('newPlayer', player);
+          this.socket.on('getPlayersRet', function (playersRet) {
+            _this2.setState({
+              players: playersRet
+            });
+          });
+          this.socket.emit('getPlayers');
+          this.socket.on('hostDisconnect', function () {
+            _reactNative.Alert.alert('Host Disconnected', 'The Host has left the party', [{
+              text: 'OK'
+            }], {
+              cancelable: false
+            });
+
+            _this2.socket.disconnect();
+
+            navigation.navigate('JoinGame');
+          });
+        } else {
+          this.socket.on('getPlayers', function () {
+            var players = _this2.state.players;
+
+            _this2.socket.emit('getPlayersRet', players);
+          });
+        }
+      }
+    }, {
+      key: "componentWillUnmount",
+      value: function componentWillUnmount() {
+        var _this$state = this.state,
+            type = _this$state.type,
+            me = _this$state.me;
+
+        if (type === 'create') {
+          this.socket.emit('hostDisconnect');
+        } else if (type === 'join') {
+          this.socket.emit('clientDisconnect', me);
+        }
+
+        this.socket.emit('leaveRoom');
+        this.socket.disconnect();
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _this$state2 = this.state,
+            type = _this$state2.type,
+            roomId = _this$state2.roomId,
+            players = _this$state2.players,
+            loading = _this$state2.loading;
+        return _react.default.createElement(_reactNative.View, {
+          style: _styles.default.container
+        }, _react.default.createElement(_loader.default, {
+          loading: loading
+        }), _react.default.createElement(_reactNative.Text, null, "Hi"), _react.default.createElement(_reactNative.Text, null, "Number of Players in Lobby:", players.length), _react.default.createElement(_reactNative.Text, null, "Room Id:", roomId), _react.default.createElement(_reactNative.Text, null, "Players:"), players.map(function (item) {
+          return _react.default.createElement(_reactNative.Text, {
+            key: item.name
+          }, item.name);
+        }), type === 'create' ? _react.default.createElement(_reactNative.Button, {
+          title: "Start!",
+          onPress: function onPress() {
+            return _reactNative.Alert.alert('Not Implemented', 'Have to code the game from here', [{
+              text: 'OK'
+            }], {
+              cancelable: false
+            });
+          }
+        }) : _react.default.createElement(_reactNative.Text, null, "Waiting for host to start..."));
+      }
+    }]);
+    return Lobby;
+  }(_react.default.Component);
+
+  Lobby.propTypes = {
+    navigation: _propTypes.default.shape({
+      navigate: _propTypes.default.func.isRequired
+    }).isRequired
+  };
+  var _default = Lobby;
+  exports.default = _default;
+},1069,[1,17,21,22,34,37,40,51,5,65,1067,1018]);
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0]);
 
@@ -128420,9 +128492,11 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _socket = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9]));
 
-  var _config = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10]));
+  var _loader = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10]));
 
-  var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11]));
+  var _config = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11]));
+
+  var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[12]));
 
   var JoinGame = function (_React$Component) {
     (0, _inherits2.default)(JoinGame, _React$Component);
@@ -128434,7 +128508,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(JoinGame).call(this, props));
       _this.state = {
         name: 'Player 2',
-        roomId: ''
+        roomId: '',
+        loading: false
       };
       return _this;
     }
@@ -128444,11 +128519,15 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       value: function render() {
         var _this2 = this;
 
-        var roomId = this.state.roomId;
-        var name = this.state.name;
+        var _this$state = this.state,
+            roomId = _this$state.roomId,
+            name = _this$state.name,
+            loading = _this$state.loading;
         return _react.default.createElement(_reactNative.View, {
           style: _styles.default.container
-        }, _react.default.createElement(_reactNative.TextInput, {
+        }, _react.default.createElement(_loader.default, {
+          loading: loading
+        }), _react.default.createElement(_reactNative.TextInput, {
           style: {
             height: 40,
             borderColor: 'gray',
@@ -128477,11 +128556,20 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
         }), _react.default.createElement(_reactNative.Button, {
           onPress: function onPress() {
             var navigation = _this2.props.navigation;
+
+            _this2.setState({
+              loading: true
+            });
+
             _this2.socket = (0, _socket.default)(_config.default.SOCKET_SERVER_URL, {
               transports: ['websocket']
             });
 
             _this2.socket.on('connect', function () {
+              _this2.setState({
+                loading: false
+              });
+
               _this2.socket.emit('getRoomInfo', roomId);
 
               _this2.socket.on('roomInfo', function (info) {
@@ -128493,21 +128581,21 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
                   });
 
                   _this2.socket.disconnect();
-
-                  navigation.navigate('JoinGame');
                 } else {
-                  _this2.socket.disconnect();
+                  _this2.socket.removeAllListeners();
 
                   navigation.navigate('Lobby', {
                     type: 'join',
+                    playerName: name,
                     joinId: roomId,
-                    playerName: name
+                    socket: _this2.socket
                   });
                 }
               });
             });
           },
-          title: "Join"
+          title: "Join",
+          disabled: roomId.length < 1
         }));
       }
     }]);
@@ -128521,7 +128609,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   var _default = JoinGame;
   exports.default = _default;
-},1069,[1,21,22,34,37,40,51,5,65,1021,1068,1018]);
+},1070,[1,21,22,34,37,40,51,5,65,1020,1067,1068,1018]);
 __r(85);
 __r(0);
 //# sourceMappingURL=http://127.0.0.1:19001/node_modules/expo/AppEntry.map?dev=false&hot=false&assetPlugin=%2Fhome%2Frokologik%2FtestWorkspace%2Fowowolf%2Fnode_modules%2Fexpo%2Ftools%2FhashAssetFiles.js&platform=ios

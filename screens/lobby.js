@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, Text, Button, Alert } from 'react-native';
-import socketIOClient from 'socket.io-client';
 import PropTypes from 'prop-types';
-import SOCKET_SERVER_URL from '../config/config';
+import Loader from '../components/loader';
 import styles from '../styles/styles';
 
 class Lobby extends React.Component {
@@ -12,6 +11,7 @@ class Lobby extends React.Component {
     this.state = {
       type: '',
       roomId: '',
+      loading: false,
       me: { name: '' },
       players: []
     };
@@ -36,51 +36,48 @@ class Lobby extends React.Component {
       this.setState({ roomId: connectRoomId });
     }
 
-    this.socket = socketIOClient(SOCKET_SERVER_URL.SOCKET_SERVER_URL, {
-      transports: ['websocket']
+    this.socket = navigation.getParam('socket', {});
+
+    this.setState(prevState => {
+      if (prevState.players.length === 0) return { players: [player] };
+      return { players: [...prevState.players, player] };
     });
-    this.socket.on('connect', () => {
-      this.setState(prevState => {
-        if (prevState.players.length === 0) return { players: [player] };
-        return { players: [...prevState.players, player] };
+
+    this.socket.emit('join', connectRoomId);
+
+    this.socket.on('newPlayer', newPlayerInfo => {
+      this.setState(prevState => ({ players: [...prevState.players, newPlayerInfo] }));
+    });
+
+    this.socket.on('clientDisconnect', client => {
+      const { players } = this.state;
+      this.setState({
+        players: players.filter(connectedClient => {
+          return connectedClient.name !== client.name;
+        })
       });
+    });
 
-      this.socket.emit('join', connectRoomId);
-
-      this.socket.on('newPlayer', newPlayerInfo => {
-        this.setState(prevState => ({ players: [...prevState.players, newPlayerInfo] }));
+    if (type === 'join') {
+      this.socket.emit('newPlayer', player);
+      this.socket.on('getPlayersRet', playersRet => {
+        this.setState({ players: playersRet });
       });
+      this.socket.emit('getPlayers');
 
-      this.socket.on('clientDisconnect', client => {
+      this.socket.on('hostDisconnect', () => {
+        Alert.alert('Host Disconnected', 'The Host has left the party', [{ text: 'OK' }], {
+          cancelable: false
+        });
+        this.socket.disconnect();
+        navigation.navigate('JoinGame');
+      });
+    } else {
+      this.socket.on('getPlayers', () => {
         const { players } = this.state;
-        this.setState({
-          players: players.filter(connectedClient => {
-            return connectedClient.name !== client.name;
-          })
-        });
+        this.socket.emit('getPlayersRet', players);
       });
-
-      if (type === 'join') {
-        this.socket.emit('newPlayer', player);
-        this.socket.on('getPlayersRet', playersRet => {
-          this.setState({ players: playersRet });
-        });
-        this.socket.emit('getPlayers');
-
-        this.socket.on('hostDisconnect', () => {
-          Alert.alert('Host Disconnected', 'The Host has left the party', [{ text: 'OK' }], {
-            cancelable: false
-          });
-          this.socket.disconnect();
-          navigation.navigate('JoinGame');
-        });
-      } else {
-        this.socket.on('getPlayers', () => {
-          const { players } = this.state;
-          this.socket.emit('getPlayersRet', players);
-        });
-      }
-    });
+    }
   }
 
   componentWillUnmount() {
@@ -95,9 +92,10 @@ class Lobby extends React.Component {
   }
 
   render() {
-    const { type, roomId, players } = this.state;
+    const { type, roomId, players, loading } = this.state;
     return (
       <View style={styles.container}>
+        <Loader loading={loading} />
         <Text>Hi</Text>
         <Text>
           Number of Players in Lobby:
